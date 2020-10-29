@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FlyOutHearder.Views.FlyoutMenuHeader">
+    <ContentView.Content>
+        <Grid Padding="10,15" VerticalOptions="Start">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="1"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="20"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Text="Bruce Wayne" Grid.Row="0" FontSize="Title" MaxLines="2" FontAttributes="Bold" TextColor="#999999"/>
+                <Grid Padding="0,10,0,0" Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Text="Profession :" HorizontalOptions="StartAndExpand" VerticalOptions="Start" FontSize="Small" TextColor="Black"/>
+                    <Label Grid.Column="1" Text="Batman" VerticalOptions="Start" LineBreakMode="TailTruncation" FontSize="Small"/>
+                </Grid>
+                <Grid Padding="0,0,0,5" Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Text="City :" FontSize="Small" VerticalOptions="Start"  TextColor="Black"/>
+                    <Label Grid.Column="1" Text="Gotham" VerticalOptions="Start" HorizontalOptions="FillAndExpand" LineBreakMode="TailTruncation" FontSize="Small"/>
+                </Grid>
+            </Grid>
+            <Label Grid.ColumnSpan="3" Grid.Row="1" BackgroundColor="Gray"/>
+            <Image Grid.Column="2" VerticalOptions="Start" HorizontalOptions="Center" Source="close.png" >
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1" />
+                </Image.GestureRecognizers>
+            </Image>
+        </Grid>
+    </ContentView.Content>
+</ContentView>
